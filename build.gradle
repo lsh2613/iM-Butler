@@ -29,6 +29,12 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // json
+    implementation 'org.json:json:20210307'
+
+    // hibernate-spatial
+    implementation group: 'org.hibernate', name: 'hibernate-spatial', version: '6.2.5.Final'
 }
 
 tasks.named('test') {
