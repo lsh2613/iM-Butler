@@ -1,4 +1,4 @@
-package com.dgb;
+package com.dgb.openapi;
 
 import com.dgb.navermaps.util.NaverMapsApiUtil;
 import org.json.JSONException;
