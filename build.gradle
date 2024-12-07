@@ -35,6 +35,9 @@ dependencies {
 
     // hibernate-spatial
     implementation group: 'org.hibernate', name: 'hibernate-spatial', version: '6.2.5.Final'
+
+    // mysql
+    runtimeOnly 'com.mysql:mysql-connector-j'
 }
 
 tasks.named('test') {
