@@ -8,7 +8,7 @@ import org.locationtech.jts.geom.Point;
 import java.time.YearMonth;
 
 @Getter
-public class MultiplexHouseRent extends ResidenceRental {
+public class MultiplexHouseRent extends ResidenceRent {
     private String mhouseNm;
 
     @Builder

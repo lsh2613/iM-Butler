@@ -3,13 +3,13 @@ package com.dgb.residence.entity;
 import com.dgb.constant.ResidenceType;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.ToString;
 import org.locationtech.jts.geom.Point;
 
 import java.time.YearMonth;
 
 @Getter
-public class ApartmentRent extends ResidenceRental {
+public class ApartmentRent extends ResidenceRent {
+
     private String aptNm;
 
     @Builder
