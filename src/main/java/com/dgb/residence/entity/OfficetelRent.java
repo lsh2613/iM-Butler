@@ -1,14 +1,21 @@
 package com.dgb.residence.entity;
 
 import com.dgb.constant.ResidenceType;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.locationtech.jts.geom.Point;
 
 import java.time.YearMonth;
 
 @Getter
+@NoArgsConstructor
+@Entity
+@Table(name = "OFFICETEL_RENT")
 public class OfficetelRent extends ResidenceRent {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String offiNm;
 
     @Builder

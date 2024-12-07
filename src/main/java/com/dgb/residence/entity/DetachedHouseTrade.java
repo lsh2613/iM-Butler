@@ -1,14 +1,21 @@
 package com.dgb.residence.entity;
 
 import com.dgb.constant.ResidenceType;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.locationtech.jts.geom.Point;
 
 import java.time.YearMonth;
 
 @Getter
+@NoArgsConstructor
+@Entity
+@Table(name = "DETACHED_HOUSE_TRADE")
 public class DetachedHouseTrade extends ResidenceTrade {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Builder
     public DetachedHouseTrade(YearMonth dealDate, Point point, Integer dealAmount) {
