@@ -12,7 +12,7 @@ import java.time.YearMonth;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "APARTMENTRENT_RENT")
+@Table(name = "APARTMENT_RENT")
 public class ApartmentRent extends ResidenceRent {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
