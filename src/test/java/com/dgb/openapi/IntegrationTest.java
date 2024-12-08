@@ -2,7 +2,7 @@ package com.dgb.openapi;
 
 import com.dgb.navermaps.service.NaverMapsService;
 import com.dgb.residence.entity.*;
-import com.dgb.data.DataApiUtil;
+import com.dgb.data.util.DataApiUtil;
 import com.dgb.residence.util.ResidenceParsingUtil;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -64,7 +64,7 @@ public class IntegrationTest {
         for (int i = 0; i < residenceInfos.length(); i++) {
             JSONObject residenceInfo = residenceInfos.getJSONObject(i);
             ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddress(residenceInfo);
-            Point point = naverMapsService.getPoint(residenceAddress);
+            Point point = naverMapsService.convertToPoint(residenceAddress);
 
             ApartmentRent apartmentRent = ResidenceParsingUtil.parsingToAptRent(residenceInfo, point);
             System.out.println("apartmentRent = " + apartmentRent);
@@ -86,7 +86,7 @@ public class IntegrationTest {
         for (int i = 0; i < residenceInfos.length(); i++) {
             JSONObject residenceInfo = residenceInfos.getJSONObject(i);
             ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddress(residenceInfo);
-            Point point = naverMapsService.getPoint(residenceAddress);
+            Point point = naverMapsService.convertToPoint(residenceAddress);
 
             ApartmentTrade apartmentTrade = ResidenceParsingUtil.parsingToAptTrade(residenceInfo, point);
             System.out.println("apartmentTrade = " + apartmentTrade);
@@ -108,7 +108,7 @@ public class IntegrationTest {
         for (int i = 0; i < residenceInfos.length(); i++) {
             JSONObject residenceInfo = residenceInfos.getJSONObject(i);
             ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddress(residenceInfo);
-            Point point = naverMapsService.getPoint(residenceAddress);
+            Point point = naverMapsService.convertToPoint(residenceAddress);
 
             DetachedHouseRent detachedHouseRent = ResidenceParsingUtil.parsingToDHRent(residenceInfo, point);
             System.out.println("detachedHouseRent = " + detachedHouseRent);
@@ -130,7 +130,7 @@ public class IntegrationTest {
         for (int i = 0; i < residenceInfos.length(); i++) {
             JSONObject residenceInfo = residenceInfos.getJSONObject(i);
             ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddress(residenceInfo);
-            Point point = naverMapsService.getPoint(residenceAddress);
+            Point point = naverMapsService.convertToPoint(residenceAddress);
 
             DetachedHouseTrade detachedHouseTrade = ResidenceParsingUtil.parsingToDHTrade(residenceInfo, point);
             System.out.println("detachedHouseTrade = " + detachedHouseTrade);
@@ -152,7 +152,7 @@ public class IntegrationTest {
         for (int i = 0; i < residenceInfos.length(); i++) {
             JSONObject residenceInfo = residenceInfos.getJSONObject(i);
             ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddress(residenceInfo);
-            Point point = naverMapsService.getPoint(residenceAddress);
+            Point point = naverMapsService.convertToPoint(residenceAddress);
 
             MultiplexHouseRent multiplexHouseRent = ResidenceParsingUtil.parsingToMHRent(residenceInfo, point);
             System.out.println("multiplexHouseRent = " + multiplexHouseRent);
@@ -174,7 +174,7 @@ public class IntegrationTest {
         for (int i = 0; i < residenceInfos.length(); i++) {
             JSONObject residenceInfo = residenceInfos.getJSONObject(i);
             ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddress(residenceInfo);
-            Point point = naverMapsService.getPoint(residenceAddress);
+            Point point = naverMapsService.convertToPoint(residenceAddress);
 
             MultiplexHouseTrade multiplexHouseTrade = ResidenceParsingUtil.parsingToMHTrade(residenceInfo, point);
             System.out.println("multiplexHouseTrade = " + multiplexHouseTrade);
@@ -196,7 +196,7 @@ public class IntegrationTest {
         for (int i = 0; i < residenceInfos.length(); i++) {
             JSONObject residenceInfo = residenceInfos.getJSONObject(i);
             ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddress(residenceInfo);
-            Point point = naverMapsService.getPoint(residenceAddress);
+            Point point = naverMapsService.convertToPoint(residenceAddress);
 
             OfficetelRent officetelRent = ResidenceParsingUtil.parsingToOffiRent(residenceInfo, point);
             System.out.println("officetelRent = " + officetelRent);
@@ -218,7 +218,7 @@ public class IntegrationTest {
         for (int i = 0; i < residenceInfos.length(); i++) {
             JSONObject residenceInfo = residenceInfos.getJSONObject(i);
             ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddress(residenceInfo);
-            Point point = naverMapsService.getPoint(residenceAddress);
+            Point point = naverMapsService.convertToPoint(residenceAddress);
 
             OfficetelTrade officetelTrade = ResidenceParsingUtil.parsingToOffiTrade(residenceInfo, point);
             System.out.println("officetelTrade = " + officetelTrade);

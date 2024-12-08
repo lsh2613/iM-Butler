@@ -23,7 +23,7 @@ public class NaverMapsService {
     @Value("${naver-maps.client-secret}")
     private String clientSecret;
 
-    public Point getPoint(ResidenceAddress residenceAddress) {
+    public Point convertToPoint(ResidenceAddress residenceAddress) {
         RestTemplate rt = new RestTemplate();
 
         String url = String.format("%s?query=%s", endpoint, residenceAddress.mapToString());
@@ -44,6 +44,6 @@ public class NaverMapsService {
         double x = addresses.getDouble("x");
         double y = addresses.getDouble("y");
 
-        return new GeometryFactory().createPoint(new Coordinate(x, y));
+        return new GeometryFactory().createPoint(new Coordinate(y, x));
     }
 }
