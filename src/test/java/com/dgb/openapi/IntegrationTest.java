@@ -107,7 +107,7 @@ public class IntegrationTest {
 
         for (int i = 0; i < residenceInfos.length(); i++) {
             JSONObject residenceInfo = residenceInfos.getJSONObject(i);
-            ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddressWithoutJibun(residenceInfo);
+            ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddress(residenceInfo);
             Point point = naverMapsService.getPoint(residenceAddress);
 
             DetachedHouseRent detachedHouseRent = ResidenceParsingUtil.parsingToDHRent(residenceInfo, point);

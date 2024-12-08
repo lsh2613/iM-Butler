@@ -96,7 +96,7 @@ public class DataApiTest {
 
         for (int i = 0; i < residenceInfos.length(); i++) {
             JSONObject residenceInfo = residenceInfos.getJSONObject(i);
-            ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddressWithoutJibun(residenceInfo);
+            ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddress(residenceInfo);
             System.out.println("residenceAddress.mapToString() = " + residenceAddress.mapToString());
         }
     }

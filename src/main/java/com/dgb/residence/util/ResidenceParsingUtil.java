@@ -31,14 +31,9 @@ public class ResidenceParsingUtil {
     }
 
     public static ResidenceAddress createResidenceAddress(JSONObject residenceInfo) {
-        String umdNm = residenceInfo.get("umdNm").toString();
-        String jibun = residenceInfo.get("jibun").toString();
+        String umdNm = residenceInfo.optString("umdNm", Strings.EMPTY);
+        String jibun = residenceInfo.optString("jibun", Strings.EMPTY);
         return new ResidenceAddress(umdNm, jibun);
-    }
-
-    public static ResidenceAddress createResidenceAddressWithoutJibun(JSONObject residenceInfo) {
-        String umdNm = residenceInfo.get("umdNm").toString();
-        return new ResidenceAddress(umdNm, Strings.EMPTY);
     }
 
     public static ApartmentRent parsingToAptRent(JSONObject residenceInfo, Point point) throws ParseException {
