@@ -35,4 +35,18 @@ public class MultiplexHouseRent extends ResidenceRent {
                 ", mhouseNm='" + mhouseNm + '\'' +
                 '}';
     }
+
+    @Override
+    public void update(Residence newEntity) {
+        if (newEntity instanceof MultiplexHouseRent newMultiplexHouseRent) {
+            this.dealDate = newMultiplexHouseRent.getDealDate();
+            this.dealType = newMultiplexHouseRent.getDealType();
+            this.point = newMultiplexHouseRent.getPoint();
+            this.deposit = newMultiplexHouseRent.getDeposit();
+            this.monthlyRent = newMultiplexHouseRent.getMonthlyRent();
+            this.mhouseNm = newMultiplexHouseRent.getMhouseNm();
+        } else {
+            throw new IllegalArgumentException("Invalid entity type for update");
+        }
+    }
 }

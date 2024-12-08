@@ -24,4 +24,6 @@ public abstract class Residence {
     protected DealType dealType;
     protected YearMonth dealDate;
     protected Point point;
+
+    public abstract void update(Residence newEntity);
 }

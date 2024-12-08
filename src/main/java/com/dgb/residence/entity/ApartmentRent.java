@@ -35,4 +35,18 @@ public class ApartmentRent extends ResidenceRent {
                 ", aptNm='" + aptNm + '\'' +
                 '}';
     }
+
+    @Override
+    public void update(Residence newEntity) {
+        if (newEntity instanceof ApartmentRent newApartmentRent) {
+            this.dealDate = newApartmentRent.getDealDate();
+            this.dealType = newApartmentRent.getDealType();
+            this.point = newApartmentRent.getPoint();
+            this.deposit = newApartmentRent.getDeposit();
+            this.monthlyRent = newApartmentRent.getMonthlyRent();
+            this.aptNm = newApartmentRent.getAptNm();
+        } else {
+            throw new IllegalArgumentException("Invalid entity type for update");
+        }
+    }
 }

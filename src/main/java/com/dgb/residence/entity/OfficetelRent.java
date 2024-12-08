@@ -35,4 +35,18 @@ public class OfficetelRent extends ResidenceRent {
                 ", offiNm='" + offiNm + '\'' +
                 '}';
     }
+
+    @Override
+    public void update(Residence newEntity) {
+        if (newEntity instanceof OfficetelRent newOfficetelRent) {
+            this.dealDate = newOfficetelRent.getDealDate();
+            this.dealType = newOfficetelRent.getDealType();
+            this.point = newOfficetelRent.getPoint();
+            this.deposit = newOfficetelRent.getDeposit();
+            this.monthlyRent = newOfficetelRent.getMonthlyRent();
+            this.offiNm = newOfficetelRent.getOffiNm();
+        } else {
+            throw new IllegalArgumentException("Invalid entity type for update");
+        }
+    }
 }

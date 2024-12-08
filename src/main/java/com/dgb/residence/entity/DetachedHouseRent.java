@@ -32,4 +32,17 @@ public class DetachedHouseRent extends ResidenceRent {
                 ", monthlyRent=" + getMonthlyRent() +
                 '}';
     }
+
+    @Override
+    public void update(Residence newEntity) {
+        if (newEntity instanceof DetachedHouseRent newDetachedHouseRent) {
+            this.dealDate = newDetachedHouseRent.getDealDate();
+            this.dealType = newDetachedHouseRent.getDealType();
+            this.point = newDetachedHouseRent.getPoint();
+            this.deposit = newDetachedHouseRent.getDeposit();
+            this.monthlyRent = newDetachedHouseRent.getMonthlyRent();
+        } else {
+            throw new IllegalArgumentException("Invalid entity type for update");
+        }
+    }
 }

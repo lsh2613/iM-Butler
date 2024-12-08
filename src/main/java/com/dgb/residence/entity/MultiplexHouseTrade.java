@@ -34,4 +34,17 @@ public class MultiplexHouseTrade extends ResidenceTrade {
                 ", mhouseNm='" + mhouseNm + '\'' +
                 '}';
     }
+
+    @Override
+    public void update(Residence newEntity) {
+        if (newEntity instanceof MultiplexHouseTrade newMultiplexHouseTrade) {
+            this.dealDate = newMultiplexHouseTrade.getDealDate();
+            this.dealType = newMultiplexHouseTrade.getDealType();
+            this.point = newMultiplexHouseTrade.getPoint();
+            this.dealAmount = newMultiplexHouseTrade.getDealAmount();
+            this.mhouseNm = newMultiplexHouseTrade.getMhouseNm();
+        } else {
+            throw new IllegalArgumentException("Invalid entity type for update");
+        }
+    }
 }

@@ -14,7 +14,8 @@ import java.time.YearMonth;
 @Entity
 @Table(name = "APARTMENT_TRADE")
 public class ApartmentTrade extends ResidenceTrade {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String aptNm;
 
@@ -33,6 +34,19 @@ public class ApartmentTrade extends ResidenceTrade {
                 ", dealAmount=" + getDealAmount() +
                 ", aptNm='" + aptNm + '\'' +
                 '}';
+    }
+
+    @Override
+    public void update(Residence newEntity) {
+        if (newEntity instanceof ApartmentTrade newApartmentTrade) {
+            this.dealDate = newApartmentTrade.getDealDate();
+            this.dealType = newApartmentTrade.getDealType();
+            this.point = newApartmentTrade.getPoint();
+            this.dealAmount = newApartmentTrade.getDealAmount();
+            this.aptNm = newApartmentTrade.getAptNm();
+        } else {
+            throw new IllegalArgumentException("Invalid entity type for update");
+        }
     }
 }
 
