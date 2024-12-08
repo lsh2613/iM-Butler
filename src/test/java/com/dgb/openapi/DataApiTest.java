@@ -1,7 +1,7 @@
 package com.dgb.openapi;
 
+import com.dgb.data.util.DataApiUtil;
 import com.dgb.residence.entity.ResidenceAddress;
-import com.dgb.data.DataApiUtil;
 import com.dgb.residence.util.ResidenceParsingUtil;
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -1,4 +1,4 @@
-package com.dgb.data;
+package com.dgb.data.util;
 
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
