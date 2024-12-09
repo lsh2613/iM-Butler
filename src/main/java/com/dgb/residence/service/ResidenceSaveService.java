@@ -54,7 +54,6 @@ public class ResidenceSaveService {
                 ResidenceAddress residenceAddress = ResidenceParsingUtil.createResidenceAddress(residenceInfo);
                 // 주소 -> 위치 좌표(위도, 경도) 변환
                 Point point = naverMapsService.convertToPoint(residenceAddress);
-                point.setSRID(4326);
 
                 T newResidence = processor.parse(residenceInfo, point);
                 Optional<T> oldResidenceOpt = processor.findByPoint(point);

@@ -54,6 +54,9 @@ public class NaverMapsService {
         double x = address.getDouble("x");
         double y = address.getDouble("y");
 
-        return new GeometryFactory().createPoint(new Coordinate(y, x));
+        Point point = new GeometryFactory().createPoint(new Coordinate(y, x));
+        point.setSRID(4326);
+
+        return point;
     }
 }
