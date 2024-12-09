@@ -33,8 +33,8 @@ public class DetachedHouseTrade extends ResidenceTrade {
     }
 
     @Override
-    public void update(Residence newEntity) {
-        if (newEntity instanceof DetachedHouseTrade newDetachedHouseTrade) {
+    public void update(Residence newResidence) {
+        if (newResidence instanceof DetachedHouseTrade newDetachedHouseTrade) {
             this.dealDate = newDetachedHouseTrade.getDealDate();
             this.dealType = newDetachedHouseTrade.getDealType();
             this.point = newDetachedHouseTrade.getPoint();

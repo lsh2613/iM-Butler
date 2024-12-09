@@ -37,8 +37,8 @@ public class MultiplexHouseRent extends ResidenceRent {
     }
 
     @Override
-    public void update(Residence newEntity) {
-        if (newEntity instanceof MultiplexHouseRent newMultiplexHouseRent) {
+    public void update(Residence newResidence) {
+        if (newResidence instanceof MultiplexHouseRent newMultiplexHouseRent) {
             this.dealDate = newMultiplexHouseRent.getDealDate();
             this.dealType = newMultiplexHouseRent.getDealType();
             this.point = newMultiplexHouseRent.getPoint();

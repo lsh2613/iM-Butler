@@ -35,8 +35,8 @@ public class OfficetelTrade extends ResidenceTrade {
     }
 
     @Override
-    public void update(Residence newEntity) {
-        if (newEntity instanceof OfficetelTrade newOfficetelTrade) {
+    public void update(Residence newResidence) {
+        if (newResidence instanceof OfficetelTrade newOfficetelTrade) {
             this.dealDate = newOfficetelTrade.getDealDate();
             this.dealType = newOfficetelTrade.getDealType();
             this.point = newOfficetelTrade.getPoint();

@@ -36,8 +36,8 @@ public class MultiplexHouseTrade extends ResidenceTrade {
     }
 
     @Override
-    public void update(Residence newEntity) {
-        if (newEntity instanceof MultiplexHouseTrade newMultiplexHouseTrade) {
+    public void update(Residence newResidence) {
+        if (newResidence instanceof MultiplexHouseTrade newMultiplexHouseTrade) {
             this.dealDate = newMultiplexHouseTrade.getDealDate();
             this.dealType = newMultiplexHouseTrade.getDealType();
             this.point = newMultiplexHouseTrade.getPoint();
