@@ -29,11 +29,11 @@ public class ApartmentRent extends ResidenceRent {
     @Override
     public String toString() {
         return "ApartmentRent{" +
-                "dealDate=" + getDealDate() +
-                ", dealType=" + getDealType() +
-                ", point=" + getPoint() +
-                ", deposit=" + getDeposit() +
-                ", monthlyRent=" + getMonthlyRent() +
+                "dealDate=" + dealDate +
+                ", dealType=" + dealType +
+                ", point=" + point +
+                ", deposit=" + deposit +
+                ", monthlyRent=" + monthlyRent +
                 ", aptNm='" + aptNm + '\'' +
                 '}';
     }

@@ -28,10 +28,10 @@ public class MultiplexHouseTrade extends ResidenceTrade {
     @Override
     public String toString() {
         return "MultiplexHouseTrade{" +
-                "dealDate=" + getDealDate() +
-                ", dealType=" + getDealType() +
-                ", point=" + getPoint() +
-                ", dealAmount=" + getDealAmount() +
+                "dealDate=" + dealDate +
+                ", dealType=" + dealType +
+                ", point=" + point +
+                ", dealAmount=" + dealAmount +
                 ", mhouseNm='" + mhouseNm + '\'' +
                 '}';
     }

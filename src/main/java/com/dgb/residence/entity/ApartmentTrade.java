@@ -29,10 +29,10 @@ public class ApartmentTrade extends ResidenceTrade {
     @Override
     public String toString() {
         return "ApartmentTrade{" +
-                "dealDate=" + getDealDate() +
-                ", dealType=" + getDealType() +
-                ", point=" + getPoint() +
-                ", dealAmount=" + getDealAmount() +
+                "dealDate=" + dealDate +
+                ", dealType=" + dealType +
+                ", point=" + point +
+                ", dealAmount=" + dealAmount +
                 ", aptNm='" + aptNm + '\'' +
                 '}';
     }
