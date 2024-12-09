@@ -1,6 +1,5 @@
 package com.dgb.residence.entity;
 
-import com.dgb.constant.ResidenceType;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,7 +19,10 @@ public class ApartmentRent extends ResidenceRent {
 
     @Builder
     public ApartmentRent(YearMonth dealDate, Point point, Integer deposit, Integer monthlyRent, String aptNm) {
-        super(ResidenceType.아파트, dealDate, point, deposit, monthlyRent);
+        this.dealDate = dealDate;
+        this.point = point;
+        this.deposit = deposit;
+        this.monthlyRent = monthlyRent;
         this.aptNm = aptNm;
     }
 

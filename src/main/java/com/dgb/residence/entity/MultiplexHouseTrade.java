@@ -1,6 +1,5 @@
 package com.dgb.residence.entity;
 
-import com.dgb.constant.ResidenceType;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,7 +19,9 @@ public class MultiplexHouseTrade extends ResidenceTrade {
 
     @Builder
     public MultiplexHouseTrade(YearMonth dealDate, Point point, Integer dealAmount, String mhouseNm) {
-        super(ResidenceType.연립다세대, dealDate, point, dealAmount);
+        this.dealDate = dealDate;
+        this.point = point;
+        this.dealAmount = dealAmount;
         this.mhouseNm = mhouseNm;
     }
 
