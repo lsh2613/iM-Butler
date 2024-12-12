@@ -54,7 +54,7 @@ public class NaverMapsService {
         double x = address.getDouble("x"); // Longitude 경도
         double y = address.getDouble("y"); // Latitude 위도
 
-        Point point = new GeometryFactory().createPoint(new Coordinate(y, x));
+        Point point = new GeometryFactory().createPoint(new Coordinate(x, y));
         point.setSRID(4326);
 
         return point;
