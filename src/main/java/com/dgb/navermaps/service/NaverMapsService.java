@@ -52,7 +52,7 @@ public class NaverMapsService {
         JSONObject address = addresses.getJSONObject(0);
 
         double x = address.getDouble("x"); // Longitude 경도
-        double y = address.getDouble("y"); // Latitue 위도
+        double y = address.getDouble("y"); // Latitude 위도
 
         Point point = new GeometryFactory().createPoint(new Coordinate(y, x));
         point.setSRID(4326);
