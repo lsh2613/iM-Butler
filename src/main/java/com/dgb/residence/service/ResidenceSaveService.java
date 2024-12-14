@@ -36,11 +36,8 @@ public class ResidenceSaveService {
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMM");
 
     public <T extends Residence> void saveResidences(ResidenceSaveReq req, ResidenceProcessor<T> processor) throws ParseException {
-        YearMonth startDate = YearMonth.parse(req.startDealYM(), formatter);
-        YearMonth endDate = YearMonth.parse(req.endDealYM(), formatter);
-
         // 공공데이터 포털의 주거지 실거래가 API에서 startDealYM ~ endDealYM 까지의 데이터 조회
-        for (YearMonth current = startDate; !current.isAfter(endDate); current = current.plusMonths(1)) {
+        for (YearMonth current = req.startDealYM(); !current.isAfter(req.endDealYM()); current = current.plusMonths(1)) {
             // 공공데이터 포털 api 조회
             ResponseEntity<String> res = getResponseByDataApi(processor.getEndpoint(), req.lawdCd(), formatter.format(current));
             // response body 파싱 -> 거주지 목록

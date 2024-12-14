@@ -1,8 +1,10 @@
 package com.dgb.residence.dto.req;
 
+import java.time.YearMonth;
+
 public record ResidenceSaveReq(
         String lawdCd,
-        String startDealYM,
-        String endDealYM
+        YearMonth startDealYM,
+        YearMonth endDealYM
 ) {
 }
