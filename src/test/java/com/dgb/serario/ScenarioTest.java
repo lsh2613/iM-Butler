@@ -81,9 +81,9 @@ public class ScenarioTest {
         Point center = new GeometryFactory().createPoint(new Coordinate(128.614151, 35.859769));
         center.setSRID(4326);
 
-        int radius = 5000;
-        int assets = 20000;
-        int loan = 20000;
+        int radius = 5000; // 5km
+        int assets = 20000; // 자산
+        int loan = 20000; // 대출금
         ResidenceTradeFilterSearchCond cond = new ResidenceTradeFilterSearchCond(center, radius, assets, loan);
 
         //when
