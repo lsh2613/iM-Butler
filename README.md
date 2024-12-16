@@ -1,4 +1,20 @@
-# DGB
+# 🏠 DGB
+## 🏠 목차
+-  [🏠 Project](#-project)
+- [🏠 Design](#-design)  
+  - [용어 정의](#용어-정의)  
+  - [클래스 다이어그램](#클래스-다이어그램)  
+  - [ERD](#erd)  
+  - [Skills](#skills)  
+  - [공공데이터 포털 API](#공공데이터-포털-api)  
+  - [네이버 지도 API - Geocoding](#네이버-지도-api---geocoding)  
+  - [주택 정보 업데이트 플로우](#주택-정보-업데이트-플로우)  
+- [🏠 Getting Started](#-getting-started)  
+   - [1. application.yml 추가](#1-applciationyml-추가)  
+   - [2. docker compose 실행](#2-docker-compose-실행)  
+   - [3. 원하는 조건에 맞게 테스트 코드 수정](#3-원하는-조건에-맞게-테스트-코드-수정)  
+
+
 ## 🏠 Project
 > - 사용자 자산 맞춤형 주택 검색 서비스
 > - 공공데이터 포털 API를 통한 주택 실거래가 데이터 조회 테스트 코드 제공
