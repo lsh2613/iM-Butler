@@ -30,7 +30,6 @@ public class ApartmentTrade extends ResidenceTrade {
     public String toString() {
         return "ApartmentTrade{" +
                 "dealDate=" + dealDate +
-                ", dealType=" + dealType +
                 ", point=" + point +
                 ", dealAmount=" + dealAmount +
                 ", aptNm='" + aptNm + '\'' +

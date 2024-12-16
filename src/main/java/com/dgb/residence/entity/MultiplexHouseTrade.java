@@ -29,7 +29,6 @@ public class MultiplexHouseTrade extends ResidenceTrade {
     public String toString() {
         return "MultiplexHouseTrade{" +
                 "dealDate=" + dealDate +
-                ", dealType=" + dealType +
                 ", point=" + point +
                 ", dealAmount=" + dealAmount +
                 ", mhouseNm='" + mhouseNm + '\'' +

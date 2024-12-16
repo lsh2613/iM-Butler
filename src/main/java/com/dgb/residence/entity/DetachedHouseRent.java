@@ -28,7 +28,6 @@ public class DetachedHouseRent extends ResidenceRent {
     public String toString() {
         return "DetachedHouseRent{" +
                 "dealDate=" + dealDate +
-                ", dealType=" + dealType +
                 ", point=" + point +
                 ", deposit=" + deposit +
                 ", monthlyRent=" + monthlyRent +

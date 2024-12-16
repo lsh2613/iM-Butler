@@ -28,7 +28,6 @@ public class OfficetelTrade extends ResidenceTrade {
     public String toString() {
         return "OfficetelTrade{" +
                 "dealDate=" + getDealDate() +
-                ", dealType=" + getDealType() +
                 ", point=" + getPoint() +
                 ", dealAmount=" + getDealAmount() +
                 ", offiNm='" + offiNm + '\'' +

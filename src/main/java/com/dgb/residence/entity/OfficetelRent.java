@@ -30,7 +30,6 @@ public class OfficetelRent extends ResidenceRent {
     public String toString() {
         return "OfficetelRent{" +
                 "dealDate=" + dealDate +
-                ", dealType=" + dealType +
                 ", point=" + point +
                 ", deposit=" + deposit +
                 ", monthlyRent=" + monthlyRent +
