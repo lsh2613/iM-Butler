@@ -14,6 +14,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
+import java.time.YearMonth;
 
 @SpringBootTest
 public class DataApiTest {
@@ -41,13 +42,13 @@ public class DataApiTest {
     private String officetelTradeEndpoint;
 
     static final String lawdCd = "27260";
-    static final String dealYMD = "202411";
+    static final YearMonth dealYM = YearMonth.of(2024, 11);
 
     @Test
     public void 아파트_전월세_실거래가_조회() throws JSONException {
         RestTemplate rt = new RestTemplate();
 
-        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYMD, decodingKey);
+        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYM, decodingKey);
 
         URI uri = DataApiUtil.creatUriWithQuery(aptRentEndpoint, body);
 
@@ -67,7 +68,7 @@ public class DataApiTest {
     public void 아파트_매매_실거래가_조회() throws JSONException {
         RestTemplate rt = new RestTemplate();
 
-        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYMD, decodingKey);
+        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYM, decodingKey);
 
         URI uri = DataApiUtil.creatUriWithQuery(aptTradeEndpoint, body);
 
@@ -86,7 +87,7 @@ public class DataApiTest {
     public void 단독다가구_전월세_실거래가_조회() throws JSONException {
         RestTemplate rt = new RestTemplate();
 
-        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYMD, decodingKey);
+        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYM, decodingKey);
 
         URI uri = DataApiUtil.creatUriWithQuery(detachedHouseRentEndpoint, body);
 
@@ -105,7 +106,7 @@ public class DataApiTest {
     public void 단독다가구_매매_실거래가_조회() throws JSONException {
         RestTemplate rt = new RestTemplate();
 
-        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYMD, decodingKey);
+        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYM, decodingKey);
 
         URI uri = DataApiUtil.creatUriWithQuery(detachedHouseTradeEndpoint, body);
 
@@ -124,7 +125,7 @@ public class DataApiTest {
     public void 연립다세대_전월세_실거래가_조회() throws JSONException {
         RestTemplate rt = new RestTemplate();
 
-        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYMD, decodingKey);
+        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYM, decodingKey);
 
         URI uri = DataApiUtil.creatUriWithQuery(multiHouseHoldRentEndpoint, body);
 
@@ -143,7 +144,7 @@ public class DataApiTest {
     public void 연립다세대_매매_실거래가_조회() throws JSONException {
         RestTemplate rt = new RestTemplate();
 
-        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYMD, decodingKey);
+        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYM, decodingKey);
 
         URI uri = DataApiUtil.creatUriWithQuery(multiHouseHoldTradeEndpoint, body);
 
@@ -162,7 +163,7 @@ public class DataApiTest {
     public void 오피스텔_전월세_실거래가_조회() throws JSONException {
         RestTemplate rt = new RestTemplate();
 
-        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYMD, decodingKey);
+        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYM, decodingKey);
 
         URI uri = DataApiUtil.creatUriWithQuery(officetelRentEndpoint, body);
 
@@ -181,7 +182,7 @@ public class DataApiTest {
     public void 오피스텔_매매_실거래가_조회() throws JSONException {
         RestTemplate rt = new RestTemplate();
 
-        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYMD, decodingKey);
+        MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYM, decodingKey);
 
         URI uri = DataApiUtil.creatUriWithQuery(officetelTradeEndpoint, body);
 

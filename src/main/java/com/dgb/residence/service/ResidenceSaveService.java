@@ -21,7 +21,6 @@ import org.springframework.web.client.RestTemplate;
 import java.net.URI;
 import java.text.ParseException;
 import java.time.YearMonth;
-import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 @Slf4j
@@ -33,13 +32,11 @@ public class ResidenceSaveService {
 
     private final NaverMapsService naverMapsService;
 
-    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMM");
-
     public <T extends Residence> void saveResidences(ResidenceSaveReq req, ResidenceProcessor<T> processor) throws ParseException {
         // 공공데이터 포털의 주거지 실거래가 API에서 startDealYM ~ endDealYM 까지의 데이터 조회
         for (YearMonth current = req.startDealYM(); !current.isAfter(req.endDealYM()); current = current.plusMonths(1)) {
             // 공공데이터 포털 api 조회
-            ResponseEntity<String> res = getResponseByDataApi(processor.getEndpoint(), req.lawdCd(), formatter.format(current));
+            ResponseEntity<String> res = getResponseByDataApi(processor.getEndpoint(), req.lawdCd(), current);
             // response body 파싱 -> 거주지 목록
             JSONArray residenceInfos = ResidenceParsingUtil.extractAddresses(res.getBody());
 
@@ -58,7 +55,6 @@ public class ResidenceSaveService {
                 // 같은 좌표라면 수정
                 if (oldResidenceOpt.isPresent() && oldResidenceOpt.get().getPoint().equals(point)) {
                     oldResidenceOpt.get().update(newResidence);
-                    log.debug("중복 데이터에 대한 업데이트");
                 } else { // 중복되지 않은 다른 좌표라면 새로 저장
                     processor.save(newResidence);
                 }
@@ -66,7 +62,7 @@ public class ResidenceSaveService {
         }
     }
 
-    private ResponseEntity<String> getResponseByDataApi(String endpoint, String lawdCd, String dealYM) {
+    private ResponseEntity<String> getResponseByDataApi(String endpoint, String lawdCd, YearMonth dealYM) {
         RestTemplate rt = new RestTemplate();
 
         MultiValueMap<String, String> body = DataApiUtil.createBody(lawdCd, dealYM, decodingKey);
