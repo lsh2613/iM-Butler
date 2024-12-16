@@ -38,7 +38,6 @@ public class OfficetelTrade extends ResidenceTrade {
     public void update(Residence newResidence) {
         if (newResidence instanceof OfficetelTrade newOfficetelTrade) {
             this.dealDate = newOfficetelTrade.getDealDate();
-            this.dealType = newOfficetelTrade.getDealType();
             this.point = newOfficetelTrade.getPoint();
             this.dealAmount = newOfficetelTrade.getDealAmount();
             this.offiNm = newOfficetelTrade.getOffiNm();

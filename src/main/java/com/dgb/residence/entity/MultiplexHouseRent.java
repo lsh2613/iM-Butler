@@ -41,7 +41,6 @@ public class MultiplexHouseRent extends ResidenceRent {
     public void update(Residence newResidence) {
         if (newResidence instanceof MultiplexHouseRent newMultiplexHouseRent) {
             this.dealDate = newMultiplexHouseRent.getDealDate();
-            this.dealType = newMultiplexHouseRent.getDealType();
             this.point = newMultiplexHouseRent.getPoint();
             this.deposit = newMultiplexHouseRent.getDeposit();
             this.monthlyRent = newMultiplexHouseRent.getMonthlyRent();

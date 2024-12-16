@@ -41,7 +41,6 @@ public class ApartmentRent extends ResidenceRent {
     public void update(Residence newResidence) {
         if (newResidence instanceof ApartmentRent newApartmentRent) {
             this.dealDate = newApartmentRent.getDealDate();
-            this.dealType = newApartmentRent.getDealType();
             this.point = newApartmentRent.getPoint();
             this.deposit = newApartmentRent.getDeposit();
             this.monthlyRent = newApartmentRent.getMonthlyRent();

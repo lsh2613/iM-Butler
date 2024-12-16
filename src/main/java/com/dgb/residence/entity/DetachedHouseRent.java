@@ -38,7 +38,6 @@ public class DetachedHouseRent extends ResidenceRent {
     public void update(Residence newResidence) {
         if (newResidence instanceof DetachedHouseRent newDetachedHouseRent) {
             this.dealDate = newDetachedHouseRent.getDealDate();
-            this.dealType = newDetachedHouseRent.getDealType();
             this.point = newDetachedHouseRent.getPoint();
             this.deposit = newDetachedHouseRent.getDeposit();
             this.monthlyRent = newDetachedHouseRent.getMonthlyRent();

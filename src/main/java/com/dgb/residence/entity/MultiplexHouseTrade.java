@@ -39,7 +39,6 @@ public class MultiplexHouseTrade extends ResidenceTrade {
     public void update(Residence newResidence) {
         if (newResidence instanceof MultiplexHouseTrade newMultiplexHouseTrade) {
             this.dealDate = newMultiplexHouseTrade.getDealDate();
-            this.dealType = newMultiplexHouseTrade.getDealType();
             this.point = newMultiplexHouseTrade.getPoint();
             this.dealAmount = newMultiplexHouseTrade.getDealAmount();
             this.mhouseNm = newMultiplexHouseTrade.getMhouseNm();

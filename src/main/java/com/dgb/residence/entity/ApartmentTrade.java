@@ -40,7 +40,6 @@ public class ApartmentTrade extends ResidenceTrade {
     public void update(Residence newResidence) {
         if (newResidence instanceof ApartmentTrade newApartmentTrade) {
             this.dealDate = newApartmentTrade.getDealDate();
-            this.dealType = newApartmentTrade.getDealType();
             this.point = newApartmentTrade.getPoint();
             this.dealAmount = newApartmentTrade.getDealAmount();
             this.aptNm = newApartmentTrade.getAptNm();

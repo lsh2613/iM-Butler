@@ -41,7 +41,6 @@ public class OfficetelRent extends ResidenceRent {
     public void update(Residence newResidence) {
         if (newResidence instanceof OfficetelRent newOfficetelRent) {
             this.dealDate = newOfficetelRent.getDealDate();
-            this.dealType = newOfficetelRent.getDealType();
             this.point = newOfficetelRent.getPoint();
             this.deposit = newOfficetelRent.getDeposit();
             this.monthlyRent = newOfficetelRent.getMonthlyRent();

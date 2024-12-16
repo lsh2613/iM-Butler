@@ -36,7 +36,6 @@ public class DetachedHouseTrade extends ResidenceTrade {
     public void update(Residence newResidence) {
         if (newResidence instanceof DetachedHouseTrade newDetachedHouseTrade) {
             this.dealDate = newDetachedHouseTrade.getDealDate();
-            this.dealType = newDetachedHouseTrade.getDealType();
             this.point = newDetachedHouseTrade.getPoint();
             this.dealAmount = newDetachedHouseTrade.getDealAmount();
         } else {
