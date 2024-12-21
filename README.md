@@ -1,4 +1,4 @@
-# 🏠 DGB
+# 🏠 iM집사
 ## 🏠 목차
 -  [🏠 Project](#-project)
 - [🏠 Design](#-design)  
