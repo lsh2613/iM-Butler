@@ -1,6 +1,8 @@
 # 🏠 iM집사
 ## 🏠 목차
--  [🏠 Project](#-project)
+- [🏠 Project](#-project)
+  - [서비스 개요](#서비스-개요)
+  - [동작 플로우](#동작-플로우)
 - [🏠 Design](#-design)  
   - [용어 정의](#용어-정의)  
   - [클래스 다이어그램](#클래스-다이어그램)  
@@ -22,6 +24,14 @@
 > - 기존에 저장된 주택을 데이터를 기반으로 필터링(거리, 매매가, 월세) 검색 기능에 대한 테스트 코드 제공
 > - 공공데이터 포털 API + 네이버 지도 API를 활용한 사용자 DB에 주택 데이터 저장 API 제공
 <br>
+
+### 서비스 개요
+![image](https://github.com/user-attachments/assets/89dfd073-a2f0-4c0c-8831-86d5a2df9c5e)
+
+### 동작 플로우
+> 기획 단계에서 정의한 플로우로, API 연동은 개발되어 있지 않습니다
+
+![image](https://github.com/user-attachments/assets/fb54bb13-c2c7-4ed2-a332-2af2e128f80a)
 
 ## 🏠 Design
 ### 용어 정의
